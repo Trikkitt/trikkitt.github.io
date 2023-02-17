@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "PolyCoin at Southend Raspberry Jam"
-date:   2023-02-18 10:00:00 +0100
+date:   2023-02-17 22:00:00 +0000
 categories: RaspberryJam
 ---
 
