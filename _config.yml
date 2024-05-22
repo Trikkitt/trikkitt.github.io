@@ -21,15 +21,15 @@ timezone: Europe/Amsterdam
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: PolyCoin Game                          # the main title
+title: PolyGen Game                          # the main title
 
-tagline: PolyCoin Crypto Miner (Game!)  # it will display as the sub-title
+tagline: PolyGen Portable Fusion Generators  # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  A minimal, responsive, and powerful Jekyll theme for presenting professional writing.
+  The PolyGen game using RFID cards to capture devices
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
-url: "https://coin.polyb.io"
+url: "https://gen.polyb.io"
 
 github:
   username: trikkitt             # change to your github username
