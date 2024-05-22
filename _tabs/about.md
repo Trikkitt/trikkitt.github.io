@@ -8,5 +8,7 @@ order: 4
 
 Please visit the player registration terminal (where you can set your codename) and scoreboard in the Null Sector.  The current scores are also visible on the game stats website [[https://stats.gen.polyb.io]].  A players portal will hopefully be online at some point during the event.
 
+Full copies of the source code, case designs, PCB designs etc are all hosted on Github [[https://github.com/trikkitt]].
+
 The game was created by Michael Turner [[https://trikkitt.com]] [[https://twitter.com/trikkitt]] [[https://mastodon.social/@Trikkitt]]
 
