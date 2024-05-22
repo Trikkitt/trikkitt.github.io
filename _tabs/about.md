@@ -4,9 +4,9 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-> PolyCoin is a game created with inspiration from Ingress.  It had a previous version called "Orbs Game" that appeared at EMF Camp 2018.  This is the updated one that is intended to fix some of the issues and be a bit more visually / audibly impressive.  
+> PolyGen is a game created with inspiration from Ingress.  It had a previous version called "Orbs Game" that appeared at EMF Camp 2018 and Polycoin at EMF Camp 2022 and MCH2022.  This version fixes issues encountered with earlier generations of the game, the biggest change from 2018 to 2022 was the addition of audio (beyond beeps) and more varied lighting along with a better case.  The 2022 to 2024 changes were focused on the casing (due to design issues with the 2022 PolyCoin cases not handling heat well) and refined software. 
 
-Please use the players web portal [[http://player.coin.polyb.io:1880/ui]].  Or visit the PolyCoin HQ by the party stage.
+Please visit the player registration terminal (where you can set your codename) and scoreboard in the Null Sector.  The current scores are also visible on the game stats website [[https://stats.gen.polyb.io]].  A players portal will hopefully be online at some point during the event.
 
-The game was created by Michael Turner [[http://trikkitt.com]] [[https://twitter.com/trikkitt]]
+The game was created by Michael Turner [[https://trikkitt.com]] [[https://twitter.com/trikkitt]] [[https://mastodon.social/@Trikkitt]]
 
