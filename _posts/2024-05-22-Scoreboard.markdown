@@ -1,0 +1,8 @@
+---
+layout: post
+title:  "PolyGen replaces PolyCoin"
+date:   2024-05-22 12:00:00 +0100
+categories: EMF2024
+---
+
+Sadly the cases for the PolyCoin units failed, it turns out that storing them in a box in a tent in summer can cause them to exceed the glassing temperature of PLA. As a result almost all cases had some degree of warping and could no longer fit together.  So PolyCoin has been retired, but the PCBs have been reused in new Poly Carbonate cases under the name PolyGen, your helpful portable fusion generator from Polybius Biotec. More details to follow...
