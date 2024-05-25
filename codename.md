@@ -7,9 +7,8 @@ layout: post
 From here you can set your codename.
 
 Password: <input type="password" id="existingpw" name="existingpw">
-<input type="checkbox" id="nopw" name="nopw" value="nopwvalue">
-<label for="nopw">I haven't set a password yet.</label><br>
-<button id="getCodename">Retrieve Codename</button>
+<p> </p> <button id="getCodename">Retrieve Codename</button><br/>
+If you haven't set a password yet then leave the password field blank.
 <br><br>
 
 <p id="codenametext" ></p><input type="hidden" id="codename" name="codename" visible=false>
