@@ -18,6 +18,13 @@ If you haven't set a password yet then leave the password field blank.
 <script src="/assets/js/bcrypt.min.js"></script>
 
 <script>
+  const searchParams = new URLSearchParams(window.location.search);
+  if (!searchParams.has('token_id')) {
+    document.getElementById("codenametext").innerHTML='No token ID';
+    return;
+  }
+  var tokenId=searchParams.get('token_id');
+
   clientId='web_' + Math.random().toString(16).substr(2, 8);
   host='wss://scores.gen.polyb.io:8002/mqtt';
   options = {
@@ -58,12 +65,6 @@ If you haven't set a password yet then leave the password field blank.
 
   
 getCodename.addEventListener("click", async () => {
-  const searchParams = new URLSearchParams(window.location.search);
-  if (!searchParams.has('token_id')) {
-    document.getElementById("codenametext").innerHTML='No token ID';
-    return;
-  }
-  tokenId=searchParams.get('token_id');
   password=document.getElementById("existingpw").value;
   
   if (password.length>0) {
