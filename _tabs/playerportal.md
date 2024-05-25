@@ -7,9 +7,9 @@ order: 2
 View your individual stats for the game here.  You'll need your RFID card or know its UID.  You can also set your codename to something you'd like rather than the randomly generated one.
 
 <input type="radio" id="stats" name="portaltype" value="stats" checked="checked">
-<label for="stats">Stats and Info</label>label><br>
+<label for="stats">Stats and Info</label><br>
 <input type="radio" id="codename" name="portaltype" value="codename">
-<label for="codename">Set Codename</label>label><br>
+<label for="codename">Set Codename</label><br>
 
 <p id="scantext">Use your phone to scan your RFID card.  Click the button then present the card to your phone.</p>
 <button id="scanButton">Scan RFID Card</button>
@@ -43,7 +43,7 @@ scanButton.addEventListener("click", async () => {
       if (document.getElementById("stats").checked) {
         window.location.href = "https://scores.gen.polyb.io/public/dashboard/84d4c4b4-c4dc-4412-91a8-515c7595e398?token_id=".concat(tokenid,"#hide_parameters=token_id");
       } else {
-        window.location.href = "https://gen.polyb.io?token_id=".concat(myUID,"#hide_parameters=token_id");
+        window.location.href = "https://gen.polyb.io?token_id=".concat(tokenid,"#hide_parameters=token_id");
       }
     });
 
