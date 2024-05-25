@@ -28,15 +28,15 @@ Password: <input type="password" id="existingpw" name="existingpw">
     reconnectPeriod: 1000,
     connectTimeout: 30 * 1000
   };
-  var client=mqtt.connection(host,options);
-  client.on('error',(err) => {
-    client.end();
+  var mqttclient=mqtt.connection(host,options);
+  mqttclient.on('error',(err) => {
+    mqttclient.end();
   })
-  client.on('connect', () => {
-    client.subscribe('/app/to/${clientId}/name', {qos: 0});
-    client.subscribe('/app/to/${clientId}/error', {qos: 0});
+  mqttclient.on('connect', () => {
+    mqttclient.subscribe('/app/to/${clientId}/name', {qos: 0});
+    mqttclient.subscribe('/app/to/${clientId}/error', {qos: 0});
   })
-  client.on('message', (topic, message, packet) => {
+  mqttclient.on('message', (topic, message, packet) => {
     if (topic = '/app/to/${clientId}/name') {
       document.getElementById("codenametext").innerHTML='Codename: ';
       document.getElementById("codenametext").visible=true;
@@ -59,7 +59,7 @@ getCodename.addEventListener("click", async () => {
     document.getElementById("codenametext").visible=true;
     tokenId=searchParams.get('token_id');
     pw=document.getElementById("existingpw").value;
-    client.publish('/app/from/${clientId}/namequery','${tokenId},${pw}', {qos: 0, retain: false});
+    mqttclient.publish('/app/from/${clientId}/namequery','${tokenId},${pw}', {qos: 0, retain: false});
   } else {
       document.getElementById("codenametext").innerHTML='No token ID';
       document.getElementById("codenametext").visible=true;
