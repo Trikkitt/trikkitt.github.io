@@ -31,11 +31,11 @@ Password: <input type="password" id="existingpw" name="existingpw">
   var mqttclient=mqtt.connection(host,options);
   mqttclient.on('error',(err) => {
     mqttclient.end();
-  })
+  });
   mqttclient.on('connect', () => {
     mqttclient.subscribe('/app/to/${clientId}/name', {qos: 0});
     mqttclient.subscribe('/app/to/${clientId}/error', {qos: 0});
-  })
+  });
   mqttclient.on('message', (topic, message, packet) => {
     if (topic = '/app/to/${clientId}/name') {
       document.getElementById("codenametext").innerHTML='Codename: ';
@@ -49,7 +49,7 @@ Password: <input type="password" id="existingpw" name="existingpw">
       document.getElementById("codenametext").visible=true;
       document.getElementById("codename").visible=false; 
     }
-  })
+  });
 
   
 getCodename.addEventListener("click", async () => {
@@ -64,5 +64,5 @@ getCodename.addEventListener("click", async () => {
       document.getElementById("codenametext").innerHTML='No token ID';
       document.getElementById("codenametext").visible=true;
   }
-})
+});
 </script>
