@@ -52,7 +52,7 @@ scanButton.addEventListener("click", async () => {
 }
 
 manualButton.addEventListener("click", async () => {
-  document.getElementById("manualtatus").innerHTML="";
+  document.getElementById("manualstatus").innerHTML="";
   regexp = /^[0-9a-fA-F]+$/;
   let myUID=document.getElementById("UID").value;
   myUID=myUID.replaceAll(":","");
