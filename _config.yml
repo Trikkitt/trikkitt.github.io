@@ -202,5 +202,5 @@ jekyll-archives:
 
 plugins:
   - jekyll-sitemap
-  - jekyll-feed
+
 
