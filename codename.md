@@ -21,9 +21,10 @@ If you haven't set a password yet then leave the password field blank.
   const searchParams = new URLSearchParams(window.location.search);
   if (!searchParams.has('token_id')) {
     document.getElementById("codenametext").innerHTML='No token ID';
-    return;
+    tokenId='00000000000000000000';
+  } else {
+    var tokenId=searchParams.get('token_id');
   }
-  var tokenId=searchParams.get('token_id');
 
   clientId='web_' + Math.random().toString(16).substr(2, 8);
   host='wss://scores.gen.polyb.io:8002/mqtt';
