@@ -5,13 +5,13 @@ layout: post
 ---
 
 From here you can set your codename.
-<form>
+
 Password: <input type="password" id="existingpw" name="existingpw">
 <input type="checkbox" id="nopw" name="nopw" value="nopwvalue">
 <label for="nopw">I haven't set a password yet.</label><br>
 <button id="getCodename">Retrieve Codename</button>
 <br><br>
-</form>
+
 <p id="codenametext" ></p><input type="hidden" id="codename" name="codename" visible=false>
 
 <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
