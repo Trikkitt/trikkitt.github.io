@@ -28,7 +28,7 @@ Password: <input type="password" id="existingpw" name="existingpw">
     reconnectPeriod: 1000,
     connectTimeout: 30 * 1000
   };
-  var mqttclient=mqtt.connection(host,options);
+  var mqttclient=mqtt.connect(host,options);
   mqttclient.on('error',(err) => {
     mqttclient.end();
   });
