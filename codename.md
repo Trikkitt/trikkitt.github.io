@@ -22,8 +22,8 @@ Password: <input type="password" id="existingpw" name="existingpw">
 </script>
 
 <script>
-  clientId='web_' + Math.random().toString(16).substr(2, 8)
-  host='wss://scores.gen.polyb.io:8002/mqtt'
+  clientId='web_' + Math.random().toString(16).substr(2, 8);
+  host='wss://scores.gen.polyb.io:8002/mqtt';
   option = {
     keepalive: 60,
     clientId: clientId,
@@ -33,8 +33,8 @@ Password: <input type="password" id="existingpw" name="existingpw">
     reconnectPeriod: 1000,
     connectTimeout: 30 * 1000
   }
-  console.log('Connection to MQTT...')
-  client=mqtt.connection(host,options)
+  console.log('Connection to MQTT...');
+  client=mqtt.connection(host,options);
   client.on('error',(err) => {
     console.log('Connection error: ', err);
     client.end();
