@@ -15,9 +15,9 @@ View your individual stats for the game here.  You'll need your RFID card or kno
 <button id="scanButton">Scan RFID Card</button>
 <p id="scanstatus"></p>
 
-Or you can manually enter the UID of your RFID card here:
-<input type="text" id="UID" name="UID"><br><br>
-<button id="manualButton">View Stats</button>
+Or you can manually enter the UID of your RFID card here:<br>
+<input type="text" id="UID" name="UID">
+<button id="manualButton">Submit</button>
 <p id="manualstatus"></p>
 
 <script>
