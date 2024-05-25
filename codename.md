@@ -19,7 +19,7 @@ Password: <input type="password" id="existingpw" name="existingpw">
 <script>
   clientId='web_' + Math.random().toString(16).substr(2, 8);
   host='wss://scores.gen.polyb.io:8002/mqtt';
-  option = {
+  options = {
     keepalive: 60,
     clientId: clientId,
     protocolId: 'MQTT',
