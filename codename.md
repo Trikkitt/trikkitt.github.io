@@ -17,11 +17,6 @@ Password: <input type="password" id="existingpw" name="existingpw">
 <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
 
 <script>
-   // Globally initializes an mqtt variable
-   console.log(mqtt)
-</script>
-
-<script>
   clientId='web_' + Math.random().toString(16).substr(2, 8);
   host='wss://scores.gen.polyb.io:8002/mqtt';
   option = {
@@ -33,22 +28,15 @@ Password: <input type="password" id="existingpw" name="existingpw">
     reconnectPeriod: 1000,
     connectTimeout: 30 * 1000
   }
-  console.log('Connection to MQTT...');
   client=mqtt.connection(host,options);
   client.on('error',(err) => {
-    console.log('Connection error: ', err);
     client.end();
   })
-  client.on('reconnect', () => {
-    console.log('Reconnecting...');
-  })
   client.on('connect', () => {
-    console.log('MQTT Connected: ${clientId}');
     client.subscribe('/app/to/${clientId}/name', {qos: 0});
     client.subscribe('/app/to/${clientId}/error', {qos: 0});
   })
   client.on('message', (topic, message, packet) => {
-    console.log(`Received Message: ${message.toString()} On topic: ${topic}`)
     if (topic = '/app/to/${clientId}/name') {
       document.getElementById("codenametext").innerHTML='Codename: ';
       document.getElementById("codenametext").visible=true;
