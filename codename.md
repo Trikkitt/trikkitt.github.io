@@ -14,7 +14,7 @@ Password: <input type="password" id="existingpw" name="existingpw">
 
 <p id="codenametext" visible=false >Codename: </p><input type="text" id="codename" name="codename" visible=false>
 
-<script src="<https://unpkg.com/mqtt/dist/mqtt.min.js>"></script>
+<script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
 
 <script>
    // Globally initializes an mqtt variable
@@ -22,9 +22,9 @@ Password: <input type="password" id="existingpw" name="existingpw">
 </script>
 
 <script>
-  const clientId='web_' + Math.random().toString(16).substr(2, 8)
-  const host='wss://scores.gen.polyb.io:8002/mqtt'
-  const option = {
+  clientId='web_' + Math.random().toString(16).substr(2, 8)
+  host='wss://scores.gen.polyb.io:8002/mqtt'
+  option = {
     keepalive: 60,
     clientId: clientId,
     protocolId: 'MQTT',
@@ -34,7 +34,7 @@ Password: <input type="password" id="existingpw" name="existingpw">
     connectTimeout: 30 * 1000
   }
   console.log('Connection to MQTT...')
-  const client=mqtt.connection(host,options)
+  client=mqtt.connection(host,options)
   client.on('error',(err) => {
     console.log('Connection error: ', err);
     client.end();
