@@ -54,10 +54,10 @@ scanButton.addEventListener("click", async () => {
 manualButton.addEventListener("click", async () => {
   document.getElementById("manualtatus").innerHTML="";
   regexp = /^[0-9a-fA-F]+$/;
-  let myUID=document.getElementById("UID").value
+  let myUID=document.getElementById("UID").value;
   myUID=myUID.replaceAll(":","");
   myUID=myUID.replaceAll(" ","");
-  if (regexp.test(myUID) {
+  if (regexp.test(myUID)) {
     if (myUID.length > 7) {
       if (myUID.length < 21 ) {
         myUID=myUID.padEnd(20,"0");
