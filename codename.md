@@ -7,7 +7,7 @@ layout: post
 From here you can set your codename.
 
 Password: <input type="password" id="existingpw" name="existingpw">
-<input type="checkbox" id="nopw" name="nopw" value="nopw">
+<input type="checkbox" id="nopw" name="nopwcheck" value="nopwvalue">
 <label for="nopw">I haven't set a password yet.</label><br>
 <button id="getCodename">Retrieve Codename</button>
 <br><br>
@@ -15,6 +15,7 @@ Password: <input type="password" id="existingpw" name="existingpw">
 <p id="codenametext" visible=false >Codename: </p><input type="text" id="codename" name="codename" visible=false>
 
 <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bcrypt@5.1.1/bcrypt.min.js"></script>
 
 <script>
   clientId='web_' + Math.random().toString(16).substr(2, 8);
@@ -54,15 +55,30 @@ Password: <input type="password" id="existingpw" name="existingpw">
   
 getCodename.addEventListener("click", async () => {
   const searchParams = new URLSearchParams(window.location.search);
-  if (searchParams.has('token_id')) {
-    document.getElementById("codenametext").innerHTML='Checking...';
-    document.getElementById("codenametext").visible=true;
-    tokenId=searchParams.get('token_id');
-    pw=document.getElementById("existingpw").value;
-    mqttclient.publish(`/app/from/${clientId}/namequery`,`${tokenId},${pw}`, {qos: 0, retain: false});
-  } else {
-      document.getElementById("codenametext").innerHTML='No token ID';
-      document.getElementById("codenametext").visible=true;
+  if (!searchParams.has('token_id')) {
+    document.getElementById("codenametext").innerHTML='No token ID';
+    return;
   }
+  tokenId=searchParams.get('token_id');
+  password=document.getElementById("existingpw").value;
+  
+  if (password.length=0) {
+    password='PolyGenNewUser';
+  }
+  if (password.length<12) {
+    document.getElementById("codenametext").innerHTML='Password invalid';
+    return;
+  }
+  if (password.length>72) {
+    document.getElementById("codenametext").innerHTML='Password invalid';
+    return;
+  }
+  document.getElementById("codenametext").innerHTML='Hashing...';
+  salt='$2b$12$PG'.concat(tokenId);
+  pw=document.getElementById("existingpw").value;
+  hash=bcrypt.hashSync(data, pw);
+  pw='';
+  document.getElementById("codenametext").innerHTML='Checking...';
+  mqttclient.publish(`/app/from/${clientId}/namequery`,`${tokenId},${hash}`, {qos: 0, retain: false});
 });
 </script>
