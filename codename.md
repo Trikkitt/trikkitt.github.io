@@ -15,7 +15,7 @@ Password: <input type="password" id="existingpw" name="existingpw">
 <p id="codenametext" visible=false >Codename: </p><input type="text" id="codename" name="codename" visible=false>
 
 <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bcrypt@5.1.1/bcrypt.min.js"></script>
+<script src="/assets/js/bcrypt.min.js"></script>
 
 <script>
   clientId='web_' + Math.random().toString(16).substr(2, 8);
@@ -73,6 +73,7 @@ getCodename.addEventListener("click", async () => {
     document.getElementById("codenametext").innerHTML='Password invalid';
     return;
   }
+  var bcrypt = dcodeIO.bcrypt;
   document.getElementById("codenametext").innerHTML='Hashing...';
   salt='$2b$12$PG'.concat(tokenId);
   pw=document.getElementById("existingpw").value;
