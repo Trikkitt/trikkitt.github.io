@@ -1,7 +1,7 @@
 ---
 title: About
 icon: fas fa-info-circle
-order: 4
+order: 5
 ---
 
 > PolyGen is a game created with inspiration from Ingress.  It had a previous version called "Orbs Game" that appeared at EMF Camp 2018 and Polycoin at EMF Camp 2022 and MCH2022.  This version fixes issues encountered with earlier generations of the game, the biggest change from 2018 to 2022 was the addition of audio (beyond beeps) and more varied lighting along with a better case.  The 2022 to 2024 changes were focused on the casing (due to design issues with the 2022 PolyCoin cases not handling heat well) and refined software. 
