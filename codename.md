@@ -59,7 +59,7 @@ getCodename.addEventListener("click", async () => {
     document.getElementById("codenametext").visible=true;
     tokenId=searchParams.get('token_id');
     pw=document.getElementById("existingpw").value;
-    mqttclient.publish('/app/from/${clientId}/namequery','${tokenId},${pw}', {qos: 0, retain: false});
+    mqttclient.publish(`/app/from/${clientId}/namequery`,`${tokenId},${pw}`, {qos: 0, retain: false});
   } else {
       document.getElementById("codenametext").innerHTML='No token ID';
       document.getElementById("codenametext").visible=true;
