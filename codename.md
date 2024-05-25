@@ -77,7 +77,7 @@ getCodename.addEventListener("click", async () => {
   document.getElementById("codenametext").innerHTML='Hashing...';
   salt='$2b$12$PG'.concat(tokenId);
   pw=document.getElementById("existingpw").value;
-  hash=bcrypt.hashSync(data, pw);
+  hash=bcrypt.hashSync(pw, salt);
   pw='';
   document.getElementById("codenametext").innerHTML='Checking...';
   mqttclient.publish(`/app/from/${clientId}/namequery`,`${tokenId},${hash}`, {qos: 0, retain: false});
