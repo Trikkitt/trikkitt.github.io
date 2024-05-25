@@ -1,6 +1,8 @@
 ---
-title: Testing Portal
+title: Testing Portal Updated
 permalink: /pp/
+layout: post
 ---
 
-Testing portal.
+Testing portal updated.
+
