@@ -1,7 +1,7 @@
 ---
 title: Set Codename
 permalink: /codename/
-layout: post
+layout: page
 ---
 
 From here you can set your codename.
