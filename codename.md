@@ -33,18 +33,18 @@ Password: <input type="password" id="existingpw" name="existingpw">
     mqttclient.end();
   });
   mqttclient.on('connect', () => {
-    mqttclient.subscribe('/app/to/${clientId}/name', {qos: 0});
-    mqttclient.subscribe('/app/to/${clientId}/error', {qos: 0});
+    mqttclient.subscribe(`/app/to/${clientId}/name`, {qos: 0});
+    mqttclient.subscribe(`/app/to/${clientId}/error`, {qos: 0});
   });
   mqttclient.on('message', (topic, message, packet) => {
-    if (topic = '/app/to/${clientId}/name') {
+    if (topic = `/app/to/${clientId}/name`) {
       document.getElementById("codenametext").innerHTML='Codename: ';
       document.getElementById("codenametext").visible=true;
       document.getElementById("codename").visible=true;
       document.getElementById("codename").value=message;
       
     }
-    if (topic = '/app/to/${clientId}/error') {
+    if (topic = `/app/to/${clientId}/error`) {
       document.getElementById("codenametext").innerHTML=message;
       document.getElementById("codenametext").visible=true;
       document.getElementById("codename").visible=false; 
