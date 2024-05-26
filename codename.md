@@ -10,7 +10,7 @@ Password: <input type="password" id="existingpw" name="existingpw">
 <button id="getCodename">Retrieve Codename</button>
 <p id="retrievestatus"> </p> <br/>
 
-<br><br>
+<br>
 
 <p id="codenametext" >Codename: </p><input type="text" id="codenamebox" name="codenamebox" disabled=true> <button id="setCodename" disabled=true>Update Codename</button>
 <p id="setcodenamestatus" > </p>
