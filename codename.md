@@ -62,11 +62,17 @@ If you haven't set a password it is highly recommended that you do.  Minimum 12 
   mqttclient.on("message", (topic, message, packet) => {
     console.log(`message topic: ${topic}`);
     console.log(`message content: ${message}`);
-    if (topic = `/app/to/${clientId}/salt`) {
+    topicsalt=`/app/to/${clientId}/salt`
+    topicname=`/app/to/${clientId}/name`
+    topicnewname=`/app/to/${clientId}/newname`
+    topicpasswordchanged=`/app/to/${clientId}/passwordchanged`
+    topicerror=`/app/to/${clientId}/error`
+    if (topic = topicsalt) {
       var playersalt=message
     }
-    if (topic = `/app/to/${clientId}/name`) {
+    if (topic = topicname) {
       console.log("Running mqtt name received");
+      console.log(`topic: ${topic}  matched: ${topicname}`);
       document.getElementById("retrievestatus").innerHTML="Completed.";
       document.getElementById("codename").value=message;
       document.getElementById("codename").disabled=false;
@@ -78,19 +84,22 @@ If you haven't set a password it is highly recommended that you do.  Minimum 12 
       document.getElementById("newpw1").disabled=false;
       document.getElementById("newpw2").disabled=false;
     }
-    if (topic = `/app/to/${clientId}/newname`) {
+    if (topic = topicnewname) {
       console.log("Running mqtt newname received");
+      console.log(`topic: ${topic}  matched: ${topicnewname}`);
       document.getElementById("setcodenamestatus").innerHTML="Updated.";
     }
-    if (topic = `/app/to/${clientId}/passwordchanged`) {
+    if (topic = topicpasswordchanged) {
       console.log("Running mqtt passwordchanged received");
+      console.log(`topic: ${topic}  matched: ${topicpasswordchanged}`);
       document.getElementById("setpwstatus").innerHTML="Updated.";
       document.getElementById("newpw1").value="";
       document.getElementById("newpw2").value="";
       hash=newhash
     }
-    if (topic = `/app/to/${clientId}/error`) {
+    if (topic = topicerror) {
       console.log("Running mqtt error received");
+      console.log(`topic: ${topic}  matched: ${topicerror}`);
       document.getElementById("retrievestatus").innerHTML=message;
     }
     return;
