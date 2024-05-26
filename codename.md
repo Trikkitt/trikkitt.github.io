@@ -26,30 +26,30 @@ If you haven't set a password it is highly recommended that you do.  Minimum 12 
 
 <script>
   const searchParams = new URLSearchParams(window.location.search);
-  if (!searchParams.has('token_id')) {
-    document.getElementById("codenametext").innerHTML='No token ID';
-    tokenId='00000000000000000000';
+  if (!searchParams.has("token_id")) {
+    document.getElementById("codenametext").innerHTML="No token ID";
+    tokenId="00000000000000000000";
   } else {
-    var tokenId=searchParams.get('token_id');
+    var tokenId=searchParams.get("token_id");
   }
 
-  clientId='web_' + Math.random().toString(16).substr(2, 8);
-  host='wss://scores.gen.polyb.io:8002/mqtt';
+  clientId="web_" + Math.random().toString(16).substr(2, 8);
+  host="wss://scores.gen.polyb.io:8002/mqtt";
   options = {
     keepalive: 60,
     clientId: clientId,
-    protocolId: 'MQTT',
+    protocolId: "MQTT",
     protocolVersion: 4,
     clean: true,
     reconnectPeriod: 1000,
     connectTimeout: 30 * 1000
   };
   var mqttclient=mqtt.connect(host,options);
-  mqttclient.on('error',(err) => {
+  mqttclient.on("error",(err) => {
     mqttclient.end();
     return;
   });
-  mqttclient.on('connect', () => {
+  mqttclient.on("connect", () => {
     mqttclient.subscribe(`/app/to/${clientId}/name`, {qos: 0});
     mqttclient.subscribe(`/app/to/${clientId}/newname`, {qos: 0});
     mqttclient.subscribe(`/app/to/${clientId}/salt`, {qos: 0});
@@ -57,7 +57,7 @@ If you haven't set a password it is highly recommended that you do.  Minimum 12 
     mqttclient.subscribe(`/app/to/${clientId}/error`, {qos: 0});
     mqttclient.publish(`/app/from/${clientId}/saltquery`,`${tokenId}`, {qos: 0, retain: false});
   });
-  mqttclient.on('message', (topic, message, packet) => {
+  mqttclient.on("message", (topic, message, packet) => {
     if (topic = `/app/to/${clientId}/salt`) {
       var playersalt=message
     }
@@ -101,12 +101,12 @@ getCodename.addEventListener("click", async () => {
       return;
     }    
   } else {
-    password='PolyGenNewUser';
+    password="PolyGenNewUser";
   }
   let bcrypt = dcodeIO.bcrypt;
   document.getElementById("retrievestatus").innerHTML="Hashing...";
   var hash=bcrypt.hashSync(password, playersalt);
-  password='';
+  password="";
   document.getElementById("retrievestatus").innerHTML="Checking...";
   mqttclient.publish(`/app/from/${clientId}/namequery`,`${tokenId},${hash}`, {qos: 0, retain: false});
   return;
@@ -135,7 +135,7 @@ setCodename.addEventListener("click", async () => {
   }
   mqttclient.publish(`/app/from/${clientId}/nameset`,`${tokenId},${hash},${newCodename}`, {qos: 0, retain: false});
   document.getElementById("setcodenamestatus").innerHTML="Updating...";
-  return'
+  return;
 });
 
 setPassword.addEventListener("click", async () => {
@@ -161,7 +161,7 @@ setPassword.addEventListener("click", async () => {
   let bcrypt = dcodeIO.bcrypt;
   var newsalt = bcrypt.genSaltSync(12);
   var newhash = bcrypt.hashSync(password, newsalt);  
-  password='';
+  password="";
   document.getElementById("setpwstatus").innerHTML="Updating...";
   mqttclient.publish(`/app/from/${clientId}/passwordset`,`${tokenId},${hash},${newhash}`, {qos: 0, retain: false});
   return;
