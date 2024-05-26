@@ -43,7 +43,7 @@ scanButton.addEventListener("click", async () => {
       if (document.getElementById("stats").checked) {
         window.location.href = "https://scores.gen.polyb.io/public/dashboard/84d4c4b4-c4dc-4412-91a8-515c7595e398?token_id=".concat(tokenid,"#hide_parameters=token_id");
       } else {
-        window.location.href = "https://gen.polyb.io?token_id=".concat(tokenid,"#hide_parameters=token_id");
+        window.location.href = "https://gen.polyb.io/codename/?token_id=".concat(tokenid,"#hide_parameters=token_id");
       }
     });
 
@@ -64,7 +64,7 @@ manualButton.addEventListener("click", async () => {
         if (document.getElementById("stats").checked) {
           window.location.href = "https://scores.gen.polyb.io/public/dashboard/84d4c4b4-c4dc-4412-91a8-515c7595e398?token_id=".concat(myUID,"#hide_parameters=token_id");
         } else {
-          window.location.href = "https://gen.polyb.io?token_id=".concat(myUID,"#hide_parameters=token_id");
+          window.location.href = "https://gen.polyb.io/codename/?token_id=".concat(myUID,"#hide_parameters=token_id");
         }
       } else {
         document.getElementById("manualstatus").innerHTML="UID too long";
