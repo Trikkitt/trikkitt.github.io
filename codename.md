@@ -143,7 +143,7 @@ setPassword.addEventListener("click", async () => {
     return;
   }
   if (password!=document.getElementById("newpw2").value) {
-    document.getElementById("setpwstatus").innerHTML='Passwords don't match.';
+    document.getElementById("setpwstatus").innerHTML='Passwords do not match.';
     return;
   }
   document.getElementById("setpwstatus").innerHTML='Hashing...';
