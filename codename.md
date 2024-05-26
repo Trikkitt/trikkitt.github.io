@@ -7,16 +7,19 @@ layout: page
 From here you can set your codename.
 
 Password: <input type="password" id="existingpw" name="existingpw">
-<p> </p> <button id="getCodename">Retrieve Codename</button><p id="retrievestatus"> a </p> <br/>
+<p> </p> <button id="getCodename">Retrieve Codename</button>
+<p id="retrievestatus"> </p> <br/>
 If you haven't set a password yet then leave the password field blank.
 <br><br>
 
-<p id="codenametext" >Codename: </p><input type="text" id="codename" name="codename" disabled=true> <button id="setCodename">Update Codename</button><p id="setcodenamestatus" > </p><br>
+<p id="codenametext" >Codename: </p><input type="text" id="codename" name="codename" disabled=true> <button id="setCodename">Update Codename</button>
+<p id="setcodenamestatus" > </p><br>
 Codenames can be between 4 and 30 characters long consisting of only letters, numbers, spaces and symbols :;#@.  Please keep them appropriate for any age.<br>
 If you haven't set a password it is highly recommended that you do.  Minimum 12 letters maximum 72.  Passwords are hashed using bcrypt.
 <p>New Password:</p><input type="password" id="newpw1" name="newpw1" disabled=true><br>
 <p>Repeat Password:</p><input type="password" id="newpw2" name="newpw2" disabled=true><br>
-<button id="setPassword" disabled=true>Update Password</button><p id="setpwstatus"> </p><br><br>
+<button id="setPassword" disabled=true>Update Password</button>
+<p id="setpwstatus"> </p><br><br>
 
 <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
 <script src="/assets/js/bcrypt.min.js"></script>
