@@ -150,7 +150,7 @@ setCodename.addEventListener("click", async () => {
   }
     
   let regex = /[A-Za-z0-9 #:;()@]+$/i;
-  if (!regex.text(newCodename)) {
+  if (!regex.test(newCodename)) {
     document.getElementById("setcodenamestatus").innerHTML="Invalid codename. Only numbers, letters, spaces and symbols #:;()@ are accepted.";
     return;
   }
