@@ -67,10 +67,10 @@ If you haven't set a password it is highly recommended that you do.  Minimum 12 
     topicnewname=`/app/to/${clientId}/newname`;
     topicpasswordchanged=`/app/to/${clientId}/passwordchanged`;
     topicerror=`/app/to/${clientId}/error`;
-    if (topic = topicsalt) {
+    if (topic == topicsalt) {
       var playersalt=message
     }
-    if (topic = topicname) {
+    if (topic == topicname) {
       console.log("Running mqtt name received");
       console.log(`topic: ${topic}  matched: ${topicname}`);
       document.getElementById("retrievestatus").innerHTML="Completed.";
@@ -84,12 +84,12 @@ If you haven't set a password it is highly recommended that you do.  Minimum 12 
       document.getElementById("newpw1").disabled=false;
       document.getElementById("newpw2").disabled=false;
     }
-    if (topic = topicnewname) {
+    if (topic == topicnewname) {
       console.log("Running mqtt newname received");
       console.log(`topic: ${topic}  matched: ${topicnewname}`);
       document.getElementById("setcodenamestatus").innerHTML="Updated.";
     }
-    if (topic = topicpasswordchanged) {
+    if (topic == topicpasswordchanged) {
       console.log("Running mqtt passwordchanged received");
       console.log(`topic: ${topic}  matched: ${topicpasswordchanged}`);
       document.getElementById("setpwstatus").innerHTML="Updated.";
@@ -97,7 +97,7 @@ If you haven't set a password it is highly recommended that you do.  Minimum 12 
       document.getElementById("newpw2").value="";
       hash=newhash
     }
-    if (topic = topicerror) {
+    if (topic == topicerror) {
       console.log("Running mqtt error received");
       console.log(`topic: ${topic}  matched: ${topicerror}`);
       document.getElementById("retrievestatus").innerHTML=message;
