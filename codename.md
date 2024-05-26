@@ -47,6 +47,7 @@ If you haven't set a password it is highly recommended that you do.  Minimum 12 
   var mqttclient=mqtt.connect(host,options);
   mqttclient.on('error',(err) => {
     mqttclient.end();
+    return;
   });
   mqttclient.on('connect', () => {
     mqttclient.subscribe(`/app/to/${clientId}/name`, {qos: 0});
@@ -84,6 +85,7 @@ If you haven't set a password it is highly recommended that you do.  Minimum 12 
     if (topic = `/app/to/${clientId}/error`) {
       document.getElementById("retrievestatus").innerHTML=message;
     }
+    return;
   });
 
   
@@ -108,6 +110,7 @@ getCodename.addEventListener("click", async () => {
   password='';
   document.getElementById("retrievestatus").innerHTML='Checking...';
   mqttclient.publish(`/app/from/${clientId}/namequery`,`${tokenId},${hash}`, {qos: 0, retain: false});
+  return;
 });
 
 setCodename.addEventListener("click", async () => {
@@ -128,6 +131,7 @@ setCodename.addEventListener("click", async () => {
   }
   mqttclient.publish(`/app/from/${clientId}/nameset`,`${tokenId},${hash},${newCodename}`, {qos: 0, retain: false});
   document.getElementById("setcodenamestatus").innerHTML="Updating...";
+  return'
 });
 
 setPassword.addEventListener("click", async () => {
@@ -156,7 +160,7 @@ setPassword.addEventListener("click", async () => {
   password='';
   document.getElementById("setpwstatus").innerHTML='Updating...';
   mqttclient.publish(`/app/from/${clientId}/passwordset`,`${tokenId},${hash},${newhash}`, {qos: 0, retain: false});
-  
+  return;
 });
   
 
