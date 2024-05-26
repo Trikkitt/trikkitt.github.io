@@ -32,7 +32,8 @@ If you haven't set a password it is highly recommended that you do.  Minimum 12 
   } else {
     var tokenId=searchParams.get("token_id");
   }
-
+  var hash=""
+  var newhash=""
   clientId="web_" + Math.random().toString(16).substr(2, 8);
   host="wss://scores.gen.polyb.io:8002/mqtt";
   options = {
@@ -105,7 +106,7 @@ getCodename.addEventListener("click", async () => {
   }
   let bcrypt = dcodeIO.bcrypt;
   document.getElementById("retrievestatus").innerHTML="Hashing...";
-  var hash=bcrypt.hashSync(password, playersalt);
+  hash=bcrypt.hashSync(password, playersalt);
   password="";
   document.getElementById("retrievestatus").innerHTML="Checking...";
   mqttclient.publish(`/app/from/${clientId}/namequery`,`${tokenId},${hash}`, {qos: 0, retain: false});
@@ -159,8 +160,8 @@ setPassword.addEventListener("click", async () => {
   }
   document.getElementById("setpwstatus").innerHTML="Hashing...";
   let bcrypt = dcodeIO.bcrypt;
-  var newsalt = bcrypt.genSaltSync(12);
-  var newhash = bcrypt.hashSync(password, newsalt);  
+  let newsalt = bcrypt.genSaltSync(12);
+  newhash = bcrypt.hashSync(password, newsalt);  
   password="";
   document.getElementById("setpwstatus").innerHTML="Updating...";
   mqttclient.publish(`/app/from/${clientId}/passwordset`,`${tokenId},${hash},${newhash}`, {qos: 0, retain: false});
