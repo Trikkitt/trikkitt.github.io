@@ -91,8 +91,7 @@ If you haven't set a password it is highly recommended that you do.  Minimum 12 
   
 getCodename.addEventListener("click", async () => {
   password=document.getElementById("existingpw").value;
-  
-  if (password.length>0) {
+  if (password) {
     if (password.length<12) {
       document.getElementById("retrievestatus").innerHTML='Password invalid';
       return;
@@ -115,12 +114,17 @@ getCodename.addEventListener("click", async () => {
 
 setCodename.addEventListener("click", async () => {
   newCodename=document.getElementById("codename").value;
-  if (len(newCodename)<4) {
+  if (newCodename) {
+    if (newCodename.length<4) {
+      document.getElementById("setcodenamestatus").innerHTML="Invalid codename. Must be at least 4 characters long.";
+      return;
+    }
+    if (newCodename.length>30) {
+      document.getElementById("setcodenamestatus").innerHTML="Invalid codename. Must be no longer than 30 characters long.";
+      return;
+    }
+  } else {
     document.getElementById("setcodenamestatus").innerHTML="Invalid codename. Must be at least 4 characters long.";
-    return;
-  }
-  if (len(newCodename)>30) {
-    document.getElementById("setcodenamestatus").innerHTML="Invalid codename. Must be no longer than 30 characters long.";
     return;
   }
     
@@ -138,27 +142,27 @@ setPassword.addEventListener("click", async () => {
   password=document.getElementById("newpw1").value;
   if (password.length>0) {
     if (password.length<12) {
-      document.getElementById("setpwstatus").innerHTML='Password too short.';
+      document.getElementById("setpwstatus").innerHTML="Password too short.";
       return;
     }
     if (password.length>72) {
-      document.getElementById("retrievestatus").innerHTML='Password too long.';
+      document.getElementById("retrievestatus").innerHTML="Password too long.";
       return;
     }    
   } else {
-    document.getElementById("setpwstatus").innerHTML='Password too short.';
+    document.getElementById("setpwstatus").innerHTML="Password too short.";
     return;
   }
   if (password!=document.getElementById("newpw2").value) {
     document.getElementById("setpwstatus").innerHTML='Passwords do not match.';
     return;
   }
-  document.getElementById("setpwstatus").innerHTML='Hashing...';
+  document.getElementById("setpwstatus").innerHTML="Hashing...";
   let bcrypt = dcodeIO.bcrypt;
   var newsalt = bcrypt.genSaltSync(12);
   var newhash = bcrypt.hashSync(password, newsalt);  
   password='';
-  document.getElementById("setpwstatus").innerHTML='Updating...';
+  document.getElementById("setpwstatus").innerHTML="Updating...";
   mqttclient.publish(`/app/from/${clientId}/passwordset`,`${tokenId},${hash},${newhash}`, {qos: 0, retain: false});
   return;
 });
