@@ -62,11 +62,11 @@ If you haven't set a password it is highly recommended that you do.  Minimum 12 
   mqttclient.on("message", (topic, message, packet) => {
     console.log(`message topic: ${topic}`);
     console.log(`message content: ${message}`);
-    topicsalt=`/app/to/${clientId}/salt`
-    topicname=`/app/to/${clientId}/name`
-    topicnewname=`/app/to/${clientId}/newname`
-    topicpasswordchanged=`/app/to/${clientId}/passwordchanged`
-    topicerror=`/app/to/${clientId}/error`
+    topicsalt=`/app/to/${clientId}/salt`;
+    topicname=`/app/to/${clientId}/name`;
+    topicnewname=`/app/to/${clientId}/newname`;
+    topicpasswordchanged=`/app/to/${clientId}/passwordchanged`;
+    topicerror=`/app/to/${clientId}/error`;
     if (topic = topicsalt) {
       var playersalt=message
     }
