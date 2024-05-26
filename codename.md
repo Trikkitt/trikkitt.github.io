@@ -34,6 +34,7 @@ If you haven't set a password it is highly recommended that you do.  Minimum 12 
   }
   var hash="";
   var newhash="";
+  var playersalt="";
   var clientId="web_" + Math.random().toString(16).substr(2, 8);
   host="wss://scores.gen.polyb.io:8002/mqtt";
   options = {
@@ -68,7 +69,7 @@ If you haven't set a password it is highly recommended that you do.  Minimum 12 
     topicpasswordchanged=`/app/to/${clientId}/passwordchanged`;
     topicerror=`/app/to/${clientId}/error`;
     if (topic == topicsalt) {
-      var playersalt=message
+      playersalt=message
     }
     if (topic == topicname) {
       console.log("Running mqtt name received");
