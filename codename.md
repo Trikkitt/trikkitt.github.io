@@ -32,8 +32,8 @@ If you haven't set a password it is highly recommended that you do.  Minimum 12 
   } else {
     var tokenId=searchParams.get("token_id");
   }
-  var hash=""
-  var newhash=""
+  var hash="";
+  var newhash="";
   clientId="web_" + Math.random().toString(16).substr(2, 8);
   host="wss://scores.gen.polyb.io:8002/mqtt";
   options = {
