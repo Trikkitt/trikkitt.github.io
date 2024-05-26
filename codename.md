@@ -7,7 +7,7 @@ layout: page
 From here you can set your codename.
 
 Password: <input type="password" id="existingpw" name="existingpw">
-<p> </p> <button id="getCodename">Retrieve Codename</button><p id="retrievestatus"> </p> <br/>
+<p> </p> <button id="getCodename">Retrieve Codename</button><p id="retrievestatus"> a </p> <br/>
 If you haven't set a password yet then leave the password field blank.
 <br><br>
 
