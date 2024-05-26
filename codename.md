@@ -16,7 +16,7 @@ Codenames can be between 4 and 20 characters long consisting of only letters, nu
 If you haven't set a password it is highly recommended that you do.  Minimum 12 letters maximum 72.  Passwords are hashed using bcrypt.
 <p>New Password:</p><input type="password" id="newpw1" name="newpw1" disabled=true><br>
 <p>Repeat Password:</p><input type="password" id="newpw2" name="newpw2" disabled=true><br>
-<button id="setPassword" disabled=true>Update Password</button><br><br>
+<button id="setPassword" disabled=true>Update Password</button><p id="setpwstatus" name="setpwstatus"></p><br><br>
 
 <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
 <script src="/assets/js/bcrypt.min.js"></script>
@@ -42,13 +42,12 @@ If you haven't set a password it is highly recommended that you do.  Minimum 12 
     connectTimeout: 30 * 1000
   };
   var mqttclient=mqtt.connect(host,options);
-  var playersalt=""
-  var hash=""
   mqttclient.on('error',(err) => {
     mqttclient.end();
   });
   mqttclient.on('connect', () => {
     mqttclient.subscribe(`/app/to/${clientId}/name`, {qos: 0});
+    mqttclient.subscribe(`/app/to/${clientId}/newname`, {qos: 0});
     mqttclient.subscribe(`/app/to/${clientId}/salt`, {qos: 0});
     mqttclient.subscribe(`/app/to/${clientId}/passwordchanged`, {qos: 0});
     mqttclient.subscribe(`/app/to/${clientId}/error`, {qos: 0});
@@ -56,18 +55,28 @@ If you haven't set a password it is highly recommended that you do.  Minimum 12 
   });
   mqttclient.on('message', (topic, message, packet) => {
     if (topic = `/app/to/${clientId}/salt`) {
-      playersalt=message
+      var playersalt=message
     }
     if (topic = `/app/to/${clientId}/name`) {
       document.getElementById("retrievestatus").innerHTML='Completed.';
       document.getElementById("codename").value=message;
       document.getElementById("codename").disabled=false;
       document.getElementById("existingpw").disabled=true;
+      document.getElementById("existingpw").value="";
       document.getElementById("getCodename").disabled=true;
       document.getElementById("setCodename").disabled=false;
       document.getElementById("setPassword").disabled=false;
       document.getElementById("newpw1").disabled=false;
       document.getElementById("newpw2").disabled=false;
+    }
+    if (topic = `/app/to/${clientId}/newname`) {
+      document.getElementById("setcodenamestatus").innerHTML='Updated.';
+    }
+    if (topic = `/app/to/${clientId}/passwordchanged`) {
+      document.getElementById("setpwstatus").innerHTML='Updated.';
+      document.getElementById("newpw1").value="";
+      document.getElementById("newpw2").value="";
+      hash=newhash
     }
     if (topic = `/app/to/${clientId}/error`) {
       document.getElementById("retrievestatus").innerHTML=message;
@@ -92,7 +101,7 @@ getCodename.addEventListener("click", async () => {
   }
   let bcrypt = dcodeIO.bcrypt;
   document.getElementById("retrievestatus").innerHTML='Hashing...';
-  hash=bcrypt.hashSync(password, playersalt);
+  var hash=bcrypt.hashSync(password, playersalt);
   password='';
   document.getElementById("retrievestatus").innerHTML='Checking...';
   mqttclient.publish(`/app/from/${clientId}/namequery`,`${tokenId},${hash}`, {qos: 0, retain: false});
@@ -116,6 +125,35 @@ setCodename.addEventListener("click", async () => {
   }
   mqttclient.publish(`/app/from/${clientId}/nameset`,`${tokenId},${hash},${newCodename}`, {qos: 0, retain: false});
   document.getElementById("setcodenamestatus").innerHTML="Updating...";
+});
+
+setPassword.addEventListener("click", async () => {
+  password=document.getElementById("newpw1").value;
+  if (password.length>0) {
+    if (password.length<12) {
+      document.getElementById("setpwstatus").innerHTML='Password too short.';
+      return;
+    }
+    if (password.length>72) {
+      document.getElementById("retrievestatus").innerHTML='Password too long.';
+      return;
+    }    
+  } else {
+    document.getElementById("setpwstatus").innerHTML='Password too short.';
+    return;
+  }
+  if (password!=document.getElementById("newpw2").value) {
+    document.getElementById("setpwstatus").innerHTML='Passwords don't match.';
+    return;
+  }
+  document.getElementById("setpwstatus").innerHTML='Hashing...';
+  let bcrypt = dcodeIO.bcrypt;
+  var newsalt = bcrypt.genSaltSync(12);
+  var newhash = bcrypt.hashSync(password, newsalt);  
+  password='';
+  document.getElementById("setpwstatus").innerHTML='Updating...';
+  mqttclient.publish(`/app/from/${clientId}/passwordset`,`${tokenId},${hash},${newhash}`, {qos: 0, retain: false});
+  
 });
   
 
