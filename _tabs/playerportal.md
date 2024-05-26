@@ -40,6 +40,8 @@ scanButton.addEventListener("click", async () => {
       let tokenid=serialNumber.toUpperCase();
       tokenid=tokenid.replaceAll(":","");
       tokenid=tokenid.padEnd(20,"0");
+      document.getElementById("UID").value=tokenid;
+      setCookie("RFIDUID",tokenid,6);
       if (document.getElementById("stats").checked) {
         window.location.href = "https://scores.gen.polyb.io/public/dashboard/84d4c4b4-c4dc-4412-91a8-515c7595e398?token_id=".concat(tokenid,"#hide_parameters=token_id");
       } else {
@@ -51,6 +53,11 @@ scanButton.addEventListener("click", async () => {
   
 }
 
+tempUID=getCookie("RFIDUID");
+if (tempUID) {
+  document.getElementById("UID").value=tempUID;
+}
+  
 manualButton.addEventListener("click", async () => {
   document.getElementById("manualstatus").innerHTML="";
   regexp = /^[0-9a-fA-F]+$/;
@@ -61,6 +68,8 @@ manualButton.addEventListener("click", async () => {
     if (myUID.length > 7) {
       if (myUID.length < 21 ) {
         myUID=myUID.padEnd(20,"0");
+        document.getElementById("UID").value=myUID;
+        setCookie("RFIDUID",myUID,6);
         if (document.getElementById("stats").checked) {
           window.location.href = "https://scores.gen.polyb.io/public/dashboard/84d4c4b4-c4dc-4412-91a8-515c7595e398?token_id=".concat(myUID,"#hide_parameters=token_id");
         } else {
@@ -76,7 +85,29 @@ manualButton.addEventListener("click", async () => {
     document.getElementById("manualstatus").innerHTML="Invalid UID.";
   }
 });
+  
+function setCookie(cname, cvalue, exdays) {
+  const d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  let expires = "expires="+ d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
 
+function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for(let i = 0; i <ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
 </script>
 
 
