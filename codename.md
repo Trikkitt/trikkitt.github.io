@@ -62,7 +62,7 @@ If you haven't set a password it is highly recommended that you do.  Minimum 12 
       var playersalt=message
     }
     if (topic = `/app/to/${clientId}/name`) {
-      document.getElementById("retrievestatus").innerHTML='Completed.';
+      document.getElementById("retrievestatus").innerHTML="Completed.";
       document.getElementById("codename").value=message;
       document.getElementById("codename").disabled=false;
       document.getElementById("existingpw").disabled=true;
@@ -74,10 +74,10 @@ If you haven't set a password it is highly recommended that you do.  Minimum 12 
       document.getElementById("newpw2").disabled=false;
     }
     if (topic = `/app/to/${clientId}/newname`) {
-      document.getElementById("setcodenamestatus").innerHTML='Updated.';
+      document.getElementById("setcodenamestatus").innerHTML="Updated.";
     }
     if (topic = `/app/to/${clientId}/passwordchanged`) {
-      document.getElementById("setpwstatus").innerHTML='Updated.';
+      document.getElementById("setpwstatus").innerHTML="Updated.";
       document.getElementById("newpw1").value="";
       document.getElementById("newpw2").value="";
       hash=newhash
@@ -93,21 +93,21 @@ getCodename.addEventListener("click", async () => {
   password=document.getElementById("existingpw").value;
   if (password) {
     if (password.length<12) {
-      document.getElementById("retrievestatus").innerHTML='Password invalid';
+      document.getElementById("retrievestatus").innerHTML="Password invalid";
       return;
     }
     if (password.length>72) {
-      document.getElementById("retrievestatus").innerHTML='Password invalid';
+      document.getElementById("retrievestatus").innerHTML="Password invalid";
       return;
     }    
   } else {
     password='PolyGenNewUser';
   }
   let bcrypt = dcodeIO.bcrypt;
-  document.getElementById("retrievestatus").innerHTML='Hashing...';
+  document.getElementById("retrievestatus").innerHTML="Hashing...";
   var hash=bcrypt.hashSync(password, playersalt);
   password='';
-  document.getElementById("retrievestatus").innerHTML='Checking...';
+  document.getElementById("retrievestatus").innerHTML="Checking...";
   mqttclient.publish(`/app/from/${clientId}/namequery`,`${tokenId},${hash}`, {qos: 0, retain: false});
   return;
 });
@@ -154,7 +154,7 @@ setPassword.addEventListener("click", async () => {
     return;
   }
   if (password!=document.getElementById("newpw2").value) {
-    document.getElementById("setpwstatus").innerHTML='Passwords do not match.';
+    document.getElementById("setpwstatus").innerHTML="Passwords do not match.";
     return;
   }
   document.getElementById("setpwstatus").innerHTML="Hashing...";
