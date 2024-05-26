@@ -4,17 +4,17 @@ permalink: /codename/
 layout: page
 ---
 
-From here you can set your codename.
+From here you can set your codename and set or change your password.  If you haven't set a password yet then leave the password field blank.
 
 Password: <input type="password" id="existingpw" name="existingpw">
-<p> </p> <button id="getCodename">Retrieve Codename</button>
+<button id="getCodename">Retrieve Codename</button>
 <p id="retrievestatus"> </p> <br/>
-If you haven't set a password yet then leave the password field blank.
+
 <br><br>
 
-<p id="codenametext" >Codename: </p><input type="text" id="codename" name="codename" disabled=true> <button id="setCodename">Update Codename</button>
-<p id="setcodenamestatus" > </p><br>
-Codenames can be between 4 and 30 characters long consisting of only letters, numbers, spaces and symbols :;#@.  Please keep them appropriate for any age.<br>
+<p id="codenametext" >Codename: </p><input type="text" id="codenamebox" name="codenamebox" disabled=true> <button id="setCodename" disabled=true>Update Codename</button>
+<p id="setcodenamestatus" > </p>
+Codenames can be between 4 and 30 characters long consisting of only letters, numbers, spaces and symbols :;#@.  Please keep them appropriate for any age.<br><br>
 If you haven't set a password it is highly recommended that you do.  Minimum 12 letters maximum 72.  Passwords are hashed using bcrypt.
 <p>New Password:</p><input type="password" id="newpw1" name="newpw1" disabled=true><br>
 <p>Repeat Password:</p><input type="password" id="newpw2" name="newpw2" disabled=true><br>
@@ -76,8 +76,8 @@ If you haven't set a password it is highly recommended that you do.  Minimum 12 
       console.log("Running mqtt name received");
       console.log(`topic: ${topic}  matched: ${topicname}`);
       document.getElementById("retrievestatus").innerHTML="Completed.";
-      document.getElementById("codename").value=message;
-      document.getElementById("codename").disabled=false;
+      document.getElementById("codenamebox").value=message;
+      document.getElementById("codenamebox").disabled=false;
       document.getElementById("existingpw").disabled=true;
       document.getElementById("existingpw").value="";
       document.getElementById("getCodename").disabled=true;
@@ -134,7 +134,7 @@ getCodename.addEventListener("click", async () => {
 });
 
 setCodename.addEventListener("click", async () => {
-  newCodename=document.getElementById("codename").value;
+  newCodename=document.getElementById("codenamebox").value;
   if (newCodename) {
     if (newCodename.length<4) {
       document.getElementById("setcodenamestatus").innerHTML="Invalid codename. Must be at least 4 characters long.";
@@ -191,5 +191,14 @@ setPassword.addEventListener("click", async () => {
   return;
 });
   
-
+codenamebox.addEventlistener("focus", async () => {
+  document.getElementById("setcodenamestatus").innerHTML=" ";
+});
+newpw1.addEventlistener("focus", async () => {
+  document.getElementById("setpwstatus").innerHTML=" ";
+});
+newpw2.addEventlistener("focus", async () => {
+  document.getElementById("setpwstatus").innerHTML=" ";
+});
+  
 </script>
