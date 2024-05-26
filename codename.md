@@ -191,13 +191,13 @@ setPassword.addEventListener("click", async () => {
   return;
 });
   
-codenamebox.addEventlistener("focus", async () => {
+codenamebox.addEventListener("focus", async () => {
   document.getElementById("setcodenamestatus").innerHTML=" ";
 });
-newpw1.addEventlistener("focus", async () => {
+newpw1.addEventListener("focus", async () => {
   document.getElementById("setpwstatus").innerHTML=" ";
 });
-newpw2.addEventlistener("focus", async () => {
+newpw2.addEventListener("focus", async () => {
   document.getElementById("setpwstatus").innerHTML=" ";
 });
   
