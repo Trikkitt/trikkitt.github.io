@@ -34,7 +34,7 @@ If you haven't set a password it is highly recommended that you do.  Minimum 12 
   }
   var hash="";
   var newhash="";
-  clientId="web_" + Math.random().toString(16).substr(2, 8);
+  var clientId="web_" + Math.random().toString(16).substr(2, 8);
   host="wss://scores.gen.polyb.io:8002/mqtt";
   options = {
     keepalive: 60,
@@ -57,12 +57,16 @@ If you haven't set a password it is highly recommended that you do.  Minimum 12 
     mqttclient.subscribe(`/app/to/${clientId}/passwordchanged`, {qos: 0});
     mqttclient.subscribe(`/app/to/${clientId}/error`, {qos: 0});
     mqttclient.publish(`/app/from/${clientId}/saltquery`,`${tokenId}`, {qos: 0, retain: false});
+    return;
   });
   mqttclient.on("message", (topic, message, packet) => {
+    console.log(`message topic: ${topic}`)
+    console.log(`message content: ${message}`)
     if (topic = `/app/to/${clientId}/salt`) {
       var playersalt=message
     }
     if (topic = `/app/to/${clientId}/name`) {
+      console.log("Running mqtt name received")
       document.getElementById("retrievestatus").innerHTML="Completed.";
       document.getElementById("codename").value=message;
       document.getElementById("codename").disabled=false;
@@ -75,15 +79,18 @@ If you haven't set a password it is highly recommended that you do.  Minimum 12 
       document.getElementById("newpw2").disabled=false;
     }
     if (topic = `/app/to/${clientId}/newname`) {
+      console.log("Running mqtt newname received")
       document.getElementById("setcodenamestatus").innerHTML="Updated.";
     }
     if (topic = `/app/to/${clientId}/passwordchanged`) {
+      console.log("Running mqtt passwordchanged received")
       document.getElementById("setpwstatus").innerHTML="Updated.";
       document.getElementById("newpw1").value="";
       document.getElementById("newpw2").value="";
       hash=newhash
     }
     if (topic = `/app/to/${clientId}/error`) {
+      console.log("Running mqtt error received")
       document.getElementById("retrievestatus").innerHTML=message;
     }
     return;
