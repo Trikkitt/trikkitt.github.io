@@ -43,6 +43,7 @@ If you haven't set a password it is highly recommended that you do.  Minimum 12 
   };
   var mqttclient=mqtt.connect(host,options);
   var playersalt=""
+  var hash=""
   mqttclient.on('error',(err) => {
     mqttclient.end();
   });
@@ -103,17 +104,18 @@ setCodename.addEventListener("click", async () => {
     document.getElementById("setcodenamestatus").innerHTML="Invalid codename. Must be at least 4 characters long.";
     return
   }
-  if (len(newCodename)>20) {
-    document.getElementById("setcodenamestatus").innerHTML="Invalid codename. Must be no longer than 20 characters long.";
+  if (len(newCodename)>30) {
+    document.getElementById("setcodenamestatus").innerHTML="Invalid codename. Must be no longer than 30 characters long.";
     return
   }
     
-  let regex = /[A-Za-z0-9 ]+$/i;
+  let regex = /[A-Za-z0-9 #:;()@]+$/i;
   if (!regex.text(newCodename)) {
-    document.getElementById("setcodenamestatus").innerHTML="Invalid codename. Only numbers, letters and spaces are accepted.";
+    document.getElementById("setcodenamestatus").innerHTML="Invalid codename. Only numbers, letters, spaces and symbols #:;()@ are accepted.";
     return
   }
-  
+  mqttclient.publish(`/app/from/${clientId}/nameset`,`${tokenId},${hash},${newCodename}`, {qos: 0, retain: false});
+  document.getElementById("setcodenamestatus").innerHTML="Updating...";
 });
   
 
