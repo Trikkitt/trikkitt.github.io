@@ -70,7 +70,7 @@ If you haven't set a password it is highly recommended that you do.  Minimum 12 
     topicpasswordchanged=`/app/to/${clientId}/passwordchanged`;
     topicerror=`/app/to/${clientId}/error`;
     if (topic == topicsalt) {
-      document.getElementById("salt").value=message
+      document.getElementById("salt").value=message;
     }
     if (topic == topicname) {
       console.log("Running mqtt name received");
@@ -124,9 +124,9 @@ getCodename.addEventListener("click", async () => {
   }
   let bcrypt = dcodeIO.bcrypt;
   document.getElementById("retrievestatus").innerHTML="Hashing...";
-  salt=document.getElementById("salt").value
+  salt=document.getElementById("salt").value;
   hash=bcrypt.hashSync(password, salt);
-  document.getElementById("hash").value=hash
+  document.getElementById("hash").value=hash;
   password="";
   document.getElementById("retrievestatus").innerHTML="Checking...";
   mqttclient.publish(`/app/from/${clientId}/namequery`,`${tokenId},${hash}`, {qos: 0, retain: false});
@@ -154,7 +154,7 @@ setCodename.addEventListener("click", async () => {
     document.getElementById("setcodenamestatus").innerHTML="Invalid codename. Only numbers, letters, spaces and symbols #:;()@ are accepted.";
     return;
   }
-  hash=document.getElementById("hash").value
+  hash=document.getElementById("hash").value;
   mqttclient.publish(`/app/from/${clientId}/nameset`,`${tokenId},${hash},${newCodename}`, {qos: 0, retain: false});
   document.getElementById("setcodenamestatus").innerHTML="Updating...";
   return;
@@ -183,8 +183,8 @@ setPassword.addEventListener("click", async () => {
   let bcrypt = dcodeIO.bcrypt;
   let newsalt = bcrypt.genSaltSync(12);
   newhash = bcrypt.hashSync(password, newsalt); 
-  document.getElementById("newhash").value=newhash
-  hash=document.getElementById("hash").value
+  document.getElementById("newhash").value=newhash;
+  hash=document.getElementById("hash").value;
   password="";
   document.getElementById("setpwstatus").innerHTML="Updating...";
   mqttclient.publish(`/app/from/${clientId}/passwordset`,`${tokenId},${hash},${newhash}`, {qos: 0, retain: false});
