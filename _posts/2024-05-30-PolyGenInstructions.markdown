@@ -55,8 +55,8 @@ We ask that you follow these rules:
 ## Timings
 The game will start on Thursday 20th May at 20:00 and run until Sunday 2nd May at 20:00
 
-## PolyCoin Home Base
-At PolyCoin Home Base located in a light blue gazebo near a DK by the north west live-in vehicles section.  Feel free to drop by and say hi.
+## PolyGen Home Base
+At PolyGen Home Base located in a light blue gazebo near a DK by the north west live-in vehicles section.  Feel free to drop by and say hi.
 
 In addition there will be a scoreboard in the Cybar area of Null Sector where you can see a live map of PolyGen units.  Note that units only appear on the map once they have been discovered.  A unit that is uncaptured will not show on the map, so you'll need to go find them.
 
