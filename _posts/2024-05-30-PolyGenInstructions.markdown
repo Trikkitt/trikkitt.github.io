@@ -13,7 +13,7 @@ To play you simply need an RFID card. Most cards will work, although anything th
 
 You can collect a free RFID card from the PolyGen Home Base just outside Null Sector by the North West live-in vehicle section, look for a light blue gazebo by the DK nearest Null Sector.  There are a selection of 3D printed tokens available for purchase if you want something a bit more colourful.  These will be moved to the Null Sector when it opens and will hopefully be in the night market too.
 
-Present your RFID card or token to any PolyGen unit. As a new player it will then ask you to select a global corporation to support.
+PolyGen units are deployed all around EMF Camp.  Locate one of these units and present your RFID card or token to the centre of the unit. As a new player it will then ask you to select a global corporation to support.
 There are four companies you can choose from:
   Nepheradine Group (Orange)
   GFY Corporation (Yellow)
@@ -33,12 +33,20 @@ You will be told if you are already boosting, or if the unit is running hot.  Fo
 
 A one-off bonus is available if you played the game at EMF Camp 2022 or MCH 2022 and you have reused your token.  In those circumstances you will be greated with a different welcome message when registering.
 
+Full scoring details as follows:
+Capture and hold: 1 per second held
+First Visit: 100 one-off
+Return Visit: 50 one-off
+Returning Player: 5,000 per event
+Output Boost: 0.1 per second held
+
 ## Rules
 We ask that you follow these rules:
   - Please do not interfer with other users playing the game.  If they are already attempting to take control of the unit then please permit them to finish.
   - Do not block others from accessing a unit by hiding it, moving it, blocking access to it or being obstructive.
   - Do not attempt to open the units, they will make a lot of noise!  If you are interested in seeing how they look inside then please drop by PolyGen Home Base.  Hopefully there will be a talk in the Null Sector if you're interested in a bit more detail.
-  - 
+  - Do not clone RFID cards.  Each player should be unique.
+  - Do not operate multiple cards, one player, one card.
 ## Timings
 The game will start on Thursday 20th May at 20:00 and run until Sunday 2nd May at 20:00
 
