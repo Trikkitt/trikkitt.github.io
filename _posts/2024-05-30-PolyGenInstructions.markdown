@@ -15,13 +15,17 @@ You can collect a free RFID card from the PolyGen Home Base just outside Null Se
 
 PolyGen units are deployed all around EMF Camp.  Locate one of these units and present your RFID card or token to the centre of the unit. As a new player it will then ask you to select a global corporation to support.
 There are four companies you can choose from:
-  Nepheradine Group (Orange)
-  GFY Corporation (Yellow)
-  Malevolant Enterprises (Teal)
-  ~~Nothing to see here Industries~~ Rebels (Emerald)
+- Nepheradine Group (Orange)
+- GFY Corporation (Yellow)
+- Malevolant Enterprises (Teal)
+- ~~Nothing to see here Industries~~ Rebels (Emerald)
+
+Nothing to see here Industries appears to be having technical issues, with a group calling themselves Rebels subverting the power for their own needs.
 
 Simply tap you token a second time when the PolyGen unit is illuminated the colour of the company you wish to support.  Your token will then be locked to that corporation.  
+
 Now go and seek other PolyGen units and present your token.  If it isn't your team colour you will capture it for your team and it will commence generating power for your chosen corporation.
+
 If a PolyGen unit is already your company colour then you can still present your token, this will record you as visiting and boost the output of that unit for as long as it is held by your team.
 
 ## Scoring
@@ -34,11 +38,11 @@ You will be told if you are already boosting, or if the unit is running hot.  Fo
 A one-off bonus is available if you played the game at EMF Camp 2022 or MCH 2022 and you have reused your token.  In those circumstances you will be greated with a different welcome message when registering.
 
 Full scoring details as follows:
-Capture and hold: 1 per second held
-First Visit: 100 one-off
-Return Visit: 50 one-off
-Returning Player: 5,000 per event
-Output Boost: 0.1 per second held
+- Capture and hold: 1 per second held
+- First Visit: 100 one-off
+- Return Visit: 50 one-off
+- Returning Player: 5,000 per event
+- Output Boost: 0.1 per second held
 
 ## Rules
 We ask that you follow these rules:
@@ -47,6 +51,7 @@ We ask that you follow these rules:
   - Do not attempt to open the units, they will make a lot of noise!  If you are interested in seeing how they look inside then please drop by PolyGen Home Base.  Hopefully there will be a talk in the Null Sector if you're interested in a bit more detail.
   - Do not clone RFID cards.  Each player should be unique.
   - Do not operate multiple cards, one player, one card.
+
 ## Timings
 The game will start on Thursday 20th May at 20:00 and run until Sunday 2nd May at 20:00
 
