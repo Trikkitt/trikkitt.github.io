@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Null Sector Opens"
-date:   2024-05-21 20:00:00 +0100
+date:   2024-05-31 20:00:00 +0100
 categories: EMF2024
 ---
 
