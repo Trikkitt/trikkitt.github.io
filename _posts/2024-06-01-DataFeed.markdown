@@ -1,0 +1,26 @@
+---
+layout: post
+title:  "PolyGen Data"
+date:   2024-05-31 23:00:00 +0100
+categories: EMF2024
+---
+
+Interested in the scores and information feed? Then just point yourself at the MQTT data feed, available on mqtt.gen.polyb.io. No need to authenticate.  Just subscribe to /scoreboard/to/# to receive all the latest scoring information as it happens.
+
+For anyone comparing that data feed to the website scoreboard, be aware the website is sourced directly from the database and only updates every 30 seconds with new scores.  While the MQTT data feed is refreshed every 5 seconds, so the two will not always match exactly.
+
+You'll find all scoreboard data encoded in JSON.
+
+Scoreboard refresh messages:
+- teams {"teamid": id, "teamname": teamname, "teamcolour": colour}  (one sent per team in the game)
+- gamestatus {"gamestatus": gamestatus, "gamestart": gamestart, "gameend": gameend} (status 1 = not yet started, 2 = in progress, 3 = game over)
+- discsonline {"discid": discid, "discname": name, "ownerteam": ownerteam, "mapx": mapx, "mapy": mapy}
+- discsoffline {"discid": discid}
+- teamscores (will add detail, but should be fairly obvious)
+- players (will add detail, but should be fairly obvious)
+
+Single event messages (happen when the event occurs):
+ - discboosted {"discID": sourceDisc, "playerID": myplayerid, "teamID": myteam}
+ - discdiscovered {"discID": sourceDisc, "playerID": myplayerid, "teamID": myteam}
+ - disccaptured {"discID": sourceDisc, "playerID": myplayerid, "teamID": myteam}
+
