@@ -53,7 +53,7 @@ We ask that you follow these rules:
   - Do not operate multiple cards, one player, one card.
 
 ## Timings
-The game will start on Thursday 20th May at 20:00 and run until Sunday 2nd May at 20:00
+The game will start on Thursday 20th May at 20:00 and run until Sunday 2nd May at 22:00
 
 ## PolyGen Home Base
 At PolyGen Home Base located in a light blue gazebo near a DK by the north west live-in vehicles section.  Feel free to drop by and say hi.
