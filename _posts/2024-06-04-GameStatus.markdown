@@ -24,7 +24,7 @@ EMF Camp 2024 is over and so we must analyse the stats from this year's PolyGen 
 
 ## Team Stats
 
-| TeamName | TotalPlayers | HighestSingleCaptureScore | TotalScore | TotalVisits | TotalUniqueVisits | TotalCaptures | UniqueCaptures | AveragePlayerScore | 
+| Team Name | Total Players | Highest Single Capture Score | Team Score | Team Visits | Total Unique Player Visits | Total Captures | Total Player Unique Captures | Average Player Score | 
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | 
 | GFY Corporation | 92 | 20970 | 1431562 | 1113 | 552 | 1154 | 498 | 15560 | 
 | Malevolant Enterprises | 236 | 69391 | 4173584 | 3179 | 1566 | 2743 | 1220 | 17685 | 
