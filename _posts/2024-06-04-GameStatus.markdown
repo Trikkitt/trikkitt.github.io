@@ -42,7 +42,7 @@ Unsurprisingly the Null Sector units were amongst the most popular.
 Unit Captures
 ---
 | Unit Name | Total Captures | 
-| --- | --- | ---: | 
+| --- | ---: | 
 | Null Sector - Cybar | 664 | 
 | Null Sector - Entrance | 659 | 
 | Null Sector - Tree 1 | 625 | 
