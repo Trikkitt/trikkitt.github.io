@@ -86,7 +86,7 @@ Unsurprisingly the Null Sector units were amongst the most popular.
 Each unit reports its battery voltage regularly.  The following shows how each unit was doing, and as you can see, one unit wasn't fully charged when deployed!
 
 ![Unit Voltage Graph](https://gen.polyb.io/assets/img/UnitVoltageHistoryEMF2024.png "Unit Voltage History")
-You can also access the more interactive version if the game server is online on [[https://scores.gen.polyb.io/public/question/cfbd2dd6-aacf-4635-9c4a-75c9167fff4a]]
+You can also access the more interactive version if the game server is online on <https://scores.gen.polyb.io/public/question/cfbd2dd6-aacf-4635-9c4a-75c9167fff4a>
 
 Very pleased to report that they still had a fair bit of power left even at the end of the event.  Except the Cheltenham Hack Space unit, which went offline around 9am on Sunday and wasn't seen again!
 
