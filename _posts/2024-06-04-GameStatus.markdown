@@ -9,20 +9,18 @@ EMF Camp 2024 is over and so we must analyse the stats from this year's PolyGen 
 
 ## General Stats
 
-Total players: 620
-Total players scoring over 1,000: 485
-Total unit captures: 7,653
-Total unit visits: 8,494
-Total output boosts: 1,231
-Players who set a codename: 58
-Players too lazy to set a codename: 562
-
-Maximum Units Online: 26
-Units Stolen: 1 (Cheltenham Hack Space - Unit 09)
-Players Completed Capture The Flag: 1
-
-Player reusing tokens from previous events: 18
-Players who played EMF 2022, MCH 2022 and EMF 2024: 3
+- Total players: 620
+- Total players scoring over 1,000: 485
+- Total unit captures: 7,653
+- Total unit visits: 8,494
+- Total output boosts: 1,231
+- Players who set a codename: 58
+- Players too lazy to set a codename: 562
+- Maximum Units Online: 26
+- Units Stolen: 1 (Cheltenham Hack Space - Unit 09)
+- Players Completed Capture The Flag: 1
+- Player reusing tokens from previous events: 18
+- Players who played EMF 2022, MCH 2022 and EMF 2024: 3
 
 ## Team Stats
 
