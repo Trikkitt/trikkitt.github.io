@@ -39,6 +39,7 @@ Team Status
 
 Unsurprisingly the Null Sector units were amongst the most popular.
 
+Unit Captures
 ---
 | Unit Name | Total Captures | 
 | --- | --- | ---: | 
@@ -70,6 +71,7 @@ Unsurprisingly the Null Sector units were amongst the most popular.
 | 2016's Worst Village | 14 | 
 
 ## Top 10 Players
+Top Players
 ---
 | Player Name | Total Score | Team Name | 
 | --- | ---: | --- | 
