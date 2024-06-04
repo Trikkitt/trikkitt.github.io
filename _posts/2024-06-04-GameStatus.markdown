@@ -25,8 +25,7 @@ Player reusing tokens from previous events: 18
 Players who played EMF 2022, MCH 2022 and EMF 2024: 3
 
 ## Team Stats
-Team Status
----
+
 | TeamName | TotalPlayers | HighestSingleCaptureScore | TotalScore | TotalVisits | TotalUniqueVisits | TotalCaptures | UniqueCaptures | AveragePlayerScore | 
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | 
 | GFY Corporation | 92 | 20970 | 1431562 | 1113 | 552 | 1154 | 498 | 15560 | 
@@ -39,8 +38,7 @@ Team Status
 
 Unsurprisingly the Null Sector units were amongst the most popular.
 
-Unit Captures
----
+
 | Unit Name | Total Captures | 
 | --- | ---: | 
 | Null Sector - Cybar | 664 | 
@@ -71,8 +69,7 @@ Unit Captures
 | 2016's Worst Village | 14 | 
 
 ## Top 10 Players
-Top Players
----
+
 | Player Name | Total Score | Team Name | 
 | --- | ---: | --- | 
 | ScaryLooking | 1210764 | Malevolant Enterprises | 
