@@ -90,6 +90,8 @@ You can also access the more interactive version if the game server is online on
 
 Very pleased to report that they still had a fair bit of power left even at the end of the event.  Except the Cheltenham Hack Space unit, which went offline around 9am on Sunday and wasn't seen again!
 
+Units are regarded as low battery and start sending alerts when they reach 3.35 volts.  When they reach 3.05 volts they are regarded as depleted and will power off.  There is a secondary protection built into the power regulator that will shutdown when the battery voltage drops to 2.5 volts.  Thankfully no recharging was required!
+
 ## Other Stats
 I'll try and update the stats and export to a Google Doc as I did in 2022 so you can have a bit of a play around with the data if you're interested.  This will take a little longer to export, so will appear over the next few days.
 
