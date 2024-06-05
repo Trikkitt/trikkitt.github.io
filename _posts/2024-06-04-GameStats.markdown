@@ -31,7 +31,7 @@ Some players decided it was good to use a payment card to play:
 - Visa Debit: 1
 - Visa Credit: 1
 
-The game records which audio clip it played to the player when they registered.  It doesn't save any card information or try to access the payment applications on the cards, it just queries the 2PAY.SYS file to see which payment applications exist on the card.  It doesn't try hard, and gives up quickly if it can't.  This is why most cards are simply identified as payment cards.
+The game records which audio clip it played to the player when they registered.  It doesn't save any card information or try to access the payment applications on the cards, it just queries the 2PAY.SYS file to see which payment applications exist on the card.  It doesn't try hard, and gives up quickly if it can't.  This is why most cards are simply identified as payment cards.  Players who used a payment card would have heard something like "Visa Debit card accepted, authorising donation to Polybius Biotech please wait... Just kidding.".
 
 ## Team Stats
 
