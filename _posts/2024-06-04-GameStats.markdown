@@ -22,6 +22,17 @@ EMF Camp 2024 is over and so we must analyse the stats from this year's PolyGen 
 - Player reusing tokens from previous events: 18
 - Players who played EMF 2022, MCH 2022 and EMF 2024: 3
 
+Some players decided it was good to use a payment card to play:
+- Total payment cards used: 32
+- Unidentified Type: 20
+- Mastercard: 3
+- Mastercard Debit: 6
+- Visa: 1
+- Visa Debit: 1
+- Visa Credit: 1
+
+The game records which audio clip it played to the player when they registered.  It doesn't save any card information or try to access the payment applications on the cards, it just queries the 2PAY.SYS file to see which payment applications exist on the card.  It doesn't try hard, and gives up quickly if it can't.  This is why most cards are simply identified as payment cards.
+
 ## Team Stats
 
 | Team Name | Total Players | Highest Single Capture Score | Team Score | Team Visits | Total Unique Player Visits | Total Captures | Total Player Unique Captures | Average Player Score | 
