@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "PolyGen Instructions"
-date:   2024-08-15 12:00:00 +0100
+date:   2024-08-15 00:00:00 +0100
 categories: Fri3dCamp2024
 ---
 
