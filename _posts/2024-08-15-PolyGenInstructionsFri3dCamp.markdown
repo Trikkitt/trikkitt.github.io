@@ -56,7 +56,7 @@ We ask that you follow these rules:
 The game will start on Thursday 15th August at 19:00 and run until Sunday 18th August at 14:00
 
 ## PolyGen Home Base
-You can collect an RFID card from the bar (back left by the snacks counter).  There will be a scoreboard in that area as well later on Friday.  I will run a show and tell at 11:00 on Sunday for anyone wanting to see inside the units.
+You can collect an RFID card from the bar (back left by the snacks counter).  There will be a scoreboard in that area as well later on Friday.  I will run a show and tell at the bar at 10:30 on Sunday for anyone wanting to see inside the units.
 
 Note that units only appear on the map once they have been discovered.  A unit that is uncaptured will not show on the map, so you'll need to go find them.
 
