@@ -1,17 +1,17 @@
 ---
 layout: post
-title:  "PolyGen Instructions"
+title:  "Fri3d Camp PolyGen Instructions"
 date:   2024-08-15 00:00:00 +0100
 categories: Fri3dCamp2024
 ---
 
-Polybius Biotech are pleased an announce the deployment of their PolyGen portable fusion generators across Fri3d Camp 2024.
+Polybius Biotech are pleased an announce the deployment of their PolyGen portable fusion generators across Fri3d Camp 2024. After a few WiFi issues the system is now operational.
 
 
 ## How to play
 To play you simply need an RFID card. Most cards will work, although anything that generates a dynamic identified such as mobile phones or some bank cards will not work.  Your objective is to keep as many of the units aligned to you team as possible.
 
-You can collect a free RFID card from the PolyGen Home Base (location will be posted later once the tent is setup!).  There are a selection of 3D printed tokens available for purchase if you want something a bit more colourful.  
+You can collect a free RFID card from the box at the bar far left by the snack area.  There are a selection of 3D printed tokens available for purchase if you want something a bit more colourful.  
 
 PolyGen units are deployed all around Fri3d Camp.  Locate one of these units and present your RFID card or token to the centre of the unit. As a new player it will then ask you to select a global corporation to support.
 There are four companies you can choose from:
@@ -56,9 +56,9 @@ We ask that you follow these rules:
 The game will start on Thursday 15th August at 19:00 and run until Sunday 18th August at 14:00
 
 ## PolyGen Home Base
-Location will be shared once the tent is setup!  Feel free to drop by and say hi.
+You can collect an RFID card from the bar (back left by the snacks counter).  There will be a scoreboard in that area as well later on Friday.  I will run a show and tell at 11:00 on Sunday for anyone wanting to see inside the units.
 
-In addition there will be a scoreboard located somewhere.  Note that units only appear on the map once they have been discovered.  A unit that is uncaptured will not show on the map, so you'll need to go find them.
+Note that units only appear on the map once they have been discovered.  A unit that is uncaptured will not show on the map, so you'll need to go find them.
 
 ## Player Website
 Set your codename (or see what PolyGen assigned to you!), just browse to [[https://gen.polyb.io/playerportal/]] and see your stats.   You can also see the overall game scores on [[https://gen.polyb.io/scores/]]
