@@ -30,7 +30,7 @@ The game records which audio clip it played to the player when they registered. 
 
 ## Team Stats
 
-| Team Name | Total Players | Highest Single Capture Score | Team Score | Team Visits | Total Unique Player Visits | Total Captures | Total Player Unique Captures | Average Player Score | 
+| Team Name | Total Players | Highest Single Capture Score | Team Score | Team Visits | Total Unique Player Visits | Total Captures | Total Player Unique Captures | Units Discovered | Average Player Score | 
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | 
 | GFY Corporation | 144 | 31960 | 1698113 | 3994 | 1216 | 3688 | 1043 | 2 | 11792.4514 | 
 | Malevolant Enterprises | 116 | 20501 | 818573 | 2856 | 941 | 3024 | 857 | 5 | 7056.6638 | 
