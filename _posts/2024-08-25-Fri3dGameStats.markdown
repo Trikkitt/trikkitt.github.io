@@ -83,7 +83,7 @@ The game records which audio clip it played to the player when they registered. 
 Each unit reports its battery voltage regularly.  The following shows how each unit was doing, and as you can see, one unit wasn't fully charged when deployed!
 
 ![Unit Voltage Graph](https://gen.polyb.io/assets/img/Fri3dCampVoltages.png "Unit Voltage History")
-You can also access the more interactive version if the game server is online on <https://scores.gen.polyb.io/public/question/cfbd2dd6-aacf-4635-9c4a-75c9167fff4a>
+You can also access the more interactive version if the game server is online on <https://scores.gen.polyb.io/public/question/4d8249a6-bb09-4ad9-b7ae-222e9e3b4ee2>
 
 Very pleased to report that they still had a fair bit of power left even at the end of the event.  The units with the most captures had the lowest battery voltage at the end of the event at 3.54 volts.
 
