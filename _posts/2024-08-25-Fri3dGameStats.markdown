@@ -22,7 +22,7 @@ Fri3d Camp 2024 is over and so we must analyse the stats from this year's PolyGe
 - Player reusing tokens from previous events: 3
 
 Some players decided it was good to use a payment card or secure card to play:
-- Total payment cards used: 6
+- Total payment/secure cards used: 6
 - Unidentified Type: 5
 - Mastercard: 1
 
