@@ -10,7 +10,7 @@ EMF Camp 2024 is over and so we must analyse the stats from this year's PolyGen 
 ## General Stats
 
 - Total players: 620
-- Total players scoring over 1,000: 485
+- Total players scoring over 1,000,485
 - Total unit captures: 7,653
 - Total unit visits: 8,494
 - Total output boosts: 1,231
