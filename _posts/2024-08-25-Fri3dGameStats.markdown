@@ -10,7 +10,7 @@ Fri3d Camp 2024 is over and so we must analyse the stats from this year's PolyGe
 ## General Stats
 
 - Total players: 525
-- Total players scoring over 1,000,386
+- Total players scoring over 1,000 points: 386
 - Total players score 4,579,331
 - Total unit captures: 12,437
 - Total unit visits: 12,722
