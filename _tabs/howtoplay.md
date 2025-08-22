@@ -4,9 +4,9 @@ icon: fas fa-info-circle
 order: 1
 ---
 
-All you need to play is an RFID card.  Somewhere at the event will be a box of free RFID cards, please take on to play or use any existing RFID card you have.
+All you need to play is an RFID card.  Somewhere at the event will be a box of free RFID cards, please take one to play or use any existing RFID card you have.  Note if you try a card and get no response either it is the wrong frequency or it has a dynamic UID (often found in bank cards, passports etc).
 
-To start playing you need to visit on the PolyGen units.  Simply present your RFID card to the middle of the unit and it will ask you to select a team.  It will cycle through all the teams three times, once it reaches the team you wish to join just tap your RFID card again.  You will now be linked to that team.  When you visit another PolyGen unit just tap you RFID card on the centre of the unit and it'll switch colour to your team.  Your objective is to keep as many of these units your team colour as possible for as long as possible.
+To start playing you need to visit one of the PolyGen units.  Simply present your RFID card to the middle of the unit and it will ask you to select a team.  It will cycle through all the teams three times, once it reaches the team you wish to join just tap your RFID card again.  Your RFID card will now be linked to that team.  When you visit another PolyGen unit just tap your RFID card on the centre of the unit and it'll switch colour to your team.  Your objective is to keep as many of these units your team colour as possible for as long as possible.
 
 You gain points in several ways:
  - Capture units (switch a unit to your team colour). You score more points the longer it stays your colour.
