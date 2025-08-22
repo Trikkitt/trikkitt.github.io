@@ -1,7 +1,7 @@
 ---
 title: Scores
 icon: fas fa-info-circle
-order: 1
+order: 2
 ---
 
 Team and general scoring information:
