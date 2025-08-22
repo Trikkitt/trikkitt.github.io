@@ -44,6 +44,7 @@ social:
   email: mjt@mjturner.co.uk             # change to your email address
   links:
     # The first element serves as the copyright owner's link
+    - https://mastodon.social/deck/@Trikkitt
     - https://twitter.com/trikkitt      # change to your twitter homepage
     - https://github.com/trikkitt       # change to your github homepage
     # Uncomment below to add more social links
