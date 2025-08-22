@@ -1,7 +1,7 @@
 ---
 title: Player Portal
 icon: fas fa-info-circle
-order: 2
+order: 3
 ---
 
 View your individual stats for the game here.  You'll need your RFID card or know its UID.  You can also set your codename to something you'd like rather than the randomly generated one.  To use this portal you must have already registered at one of the physical devices using your RFID card, so if you haven't - go out and find one then come back here.
