@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Meet the teams"
+title:  "EMF 2026 Meet the teams"
 date:   2026-07-08 12:00:00 +0100
 categories: EMF2026
 ---
