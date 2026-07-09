@@ -5,7 +5,7 @@ date:   2026-07-08 12:00:00 +0100
 categories: EMF2026
 ---
 
-Polybius Biotech calls on everyone at EMF Camp to take control of the deploy PolyGen portable power generators and direct the power to the team of their choice.
+Polybius Biotech calls on everyone at EMF Camp to take control of the deployed PolyGen portable power generators and direct the power to the team of their choice.  You can use most normal RFID cards that you already have, or you'll be able to pick up a free RFID card from Nullsector.
 
 ## Malevolant Enterprises
 ![Malevolant Enterprises](https://gen.polyb.io/assets/img/Malevolant.png "Malevolant Enterprises")
